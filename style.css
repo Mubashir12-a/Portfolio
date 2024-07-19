@@ -7,6 +7,14 @@
     color: white;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     color: white;
@@ -18,6 +26,9 @@ body {
 header {
     width: 100%;
     height: 5dvh;
+    background-color: rgb(40, 39, 39);
+    display: flex;
+    align-items: center;
     position: sticky;
     top: 0;
     left: 0;
@@ -29,7 +40,9 @@ header ul {
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
 }
 
 header ul li {
@@ -47,24 +60,112 @@ header ul li a {
 #about {
     /* background-color: white; */
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#about h2 {
+.heading {
     font-size: 2.5em;
     color: red;
     margin-left: 5%;
     margin-top: 5%;
     border-left: 3px double gold;
     padding-left: 2%;
+    align-self: flex-start;
+    text-decoration: underline white;
+}
+
+#Image-main {
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+#about p {
+    text-align: justify;
+    padding: 20px 3%;
+    font-size: 1.2em;
+}
+
+.red {
+    color: red;
+    font-size: 1em;
+}
+
+.highlight {
+    color: red;
+    font-size: 1.3em;
+}
+
+#projects {
+    padding-top: 50px;
+}
+
+#projects p{
+    text-align: justify;
+    padding: 20px 3%;
+    font-size: 1.2em;
+}
+
+.project-box {
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.project-box img {
+    height: 180px;
+    width: 300px;
+    /* background-color: red; */
+}
+
+.project-box button {
+    background-color: grey;
+    border: none;
+    border: 2px solid gold;
+    padding: 3px 10px;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project-box h3 {
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
+    header {
+        height: 10vh;
+    }
     header ul li {
         font-size: 2em;
     }
-    #about h2 {
+    .heading {
         font-size: 4em;
     } 
+    #about p {
+        font-size: 2em;
+    }
+    #projects p {
+        font-size: 2em;
+    }
+    #Image-main {
+        height: 200px;
+        width: 200px;
+    }
+    .project-box img {
+        height: 250px;
+        width: 400px;
+    }
+
 }
 
 
